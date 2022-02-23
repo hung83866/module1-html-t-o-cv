@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="nam">
+<button onclick="theky()">The ky</button>
+<p id="ketqua"></p>
+<script>
+    function theky() {
+        let a = +document.getElementById("nam").value;
+        let theky = parseInt(a/100) + 1;
+        document.getElementById("ketqua").innerHTML = theky;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="input">
+<button onclick="chuvi()">C = </button>
+<button onclick="dientich()">S = </button>
+<p id="in"></p>
+<script>
+    function chuvi() {
+        let a = document.getElementById("input").value;
+        document.getElementById("in").innerHTML = (4*a);
+    }
+    function dientich() {
+        let a = document.getElementById("input").value;
+        document.getElementById("in").innerHTML = (a*a);
+    }
+</script>
+</body>
+</html>

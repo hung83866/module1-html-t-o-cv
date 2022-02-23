@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="a">
+<input type="number" id="b">
+<input type="number" id="c">
+<button onclick="tamgiac()">Kết quả</button>
+<p id="bbb"></p>
+<script>
+    function tamgiac () {
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        let c = +document.getElementById("c").value;
+        if (((a+b)>c) && ((a+c)>b) && ((b+c)>a)) {
+            if (((a*a)==(b*b)+(c*c)) || ((c*c)==(b*b)+(a*a)) || ((b*b)==(a*a)+(c*c))) {
+                document.getElementById("bbb").innerHTML = "Tam giác vuông"
+            } else if ( a==b || a==c || b==c) {
+                document.getElementById("bbb").innerHTML = "Tam giác cân"
+            } else if (a==b==c) {
+                document.getElementById("bbb").innerHTML = "Tam giác đều"
+            }
+        } else {
+            document.getElementById("bbb").innerHTML = "Ko phải tam giác"
+        }
+    }
+</script>
+</body>
+</html>
