@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình nhập điểm của một sinh viên cho các môn: Vật lý, Hóa học, và Sinh học</title>
+</head>
+<body>
+<script>
+    let toan = parseInt(prompt('nhập điểm toán'))
+    let ly = parseInt(prompt('nhập điểm ly'))
+    let hoa = parseInt(prompt('nhập điểm hóa'))
+    let sinh = parseInt(prompt('nhập điểm sinh'))
+    let tongDiem = (toan + ly + hoa + sinh)
+    let DiemTrungbinh = tongDiem/4
+    document.write('Tổng điểm 4 môn là : ' +tongDiem);
+
+    document.write('Điểm Trung bình 4 môn là : ' +DiemTrungbinh)
+
+</script>
+</body>
+</html>
