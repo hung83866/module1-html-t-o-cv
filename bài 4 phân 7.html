@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đổi tiền</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th><h3>Amount</h3></th>
+        <th><h3>From Curency</h3></th>
+        <th><h3>To Curency</h3></th>
+
+    </tr>
+    <tr>
+        <td>
+            <input id="ra" type="number" name="amount">
+        </td>
+        <td>
+            <select id="from" name="money" onchange="convert()">
+                <option id="VietNam" value="VietNam">Việt Nam</option>
+                <option id="USD" value="USD">USD</option>
+
+            </select>
+        </td>
+
+
+        <td>
+            <select id="to" name="money1" onchange="convert()">
+                <option value="USD">USD</option>
+                <option value="VietNam">VietNam</option>
+
+            </select>
+
+        </td>
+        <td style="background-color: blueviolet;border: blue"><input type="button" name="Conver" value="Conver"
+                                                                     onclick="convert()"></td>
+    </tr>
+
+
+</table>
+<h1 id="result1"></h1>
+<script>
+    function convert() {
+        let input = +document.getElementById("ra").value;
+        let select1 = document.getElementById("from").value;
+        let select2 = document.getElementById("to").value;
+        let result = 0;
+        if (select1 === 'USD') {
+            if (select2 === 'USD') {
+                result = input;
+            } else {
+                result = input * 23000;
+            }
+
+        } else if (select1==='VietNam'){
+            if (select2==='USD'){
+                result = input / 23000;
+            }
+            else {
+                result = input;
+            }
+        }
+        document.getElementById('result1').innerHTML = 'kết quả là: '+result;
+    }
+
+
+</script>
+</body>
+</html>
